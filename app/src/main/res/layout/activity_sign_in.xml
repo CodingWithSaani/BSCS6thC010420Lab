@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInAct">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userEmailET"
+        android:hint="@string/enter_the_user_email_here"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:maxLength="20"
+        android:nextFocusDown="@id/userPasswordET"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userPasswordET"
+        android:layout_below="@id/userEmailET"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/enter_the_user_password_here"
+        android:maxLength="20"
+        android:maxLines="1"
+        android:nextFocusDown="@id/signInUser"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInUser"
+        android:layout_below="@id/userPasswordET"
+        android:text="@string/sign_in_user"
+        />
+
+    <ProgressBar
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/signInUserProgressBar"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>
